@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>JustAvar</title>
+        <script>
+
+            var justAvar = "Oh, don't you worry about it, I'm GLOBAL";
+
+            function whereAreYou() {
+                var justAvar = "Just an every day LOCAL";
+
+                function inner() {
+                    return justAvar;
+                }
+                return inner;
+            }
+
+            var innerFunction = whereAreYou();
+            var result = innerFunction();
+            console.log(result);
+        </script>
+    </head>
+
+    <body></body>
+
+</html>
